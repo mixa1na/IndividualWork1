@@ -1,0 +1,40 @@
+{
+  "pipeline": [
+    {
+      "name": "Git Clone",
+      "command": "git",
+      "args": "clone https://github.com/example/repo.git .",
+      "stopOnFailure": true
+    },
+    {
+      "name": "Git Pull",
+      "command": "git",
+      "args": "pull",
+      "stopOnFailure": true
+    },
+    {
+      "name": "Clean",
+      "command": "dotnet",
+      "args": "clean",
+      "stopOnFailure": false
+    },
+    {
+      "name": "Build",
+      "command": "dotnet",
+      "args": "build",
+      "stopOnFailure": true
+    },
+    {
+      "name": "Test",
+      "command": "dotnet",
+      "args": "test",
+      "stopOnFailure": false
+    },
+    {
+      "name": "Run",
+      "command": "dotnet",
+      "args": "run",
+      "stopOnFailure": false
+    }
+  ]
+}
